@@ -20,6 +20,10 @@ public class HelloServlets extends HttpServlet {
 		String nome = req.getParameter("pnome");
 		String sobrenome = req.getParameter("psobrenome");
 		
+		if (nome == null ){ 
+			nome = "Nome não informado";
+		}
+		
 		if (sobrenome == null ){
 			sobrenome = "Sobrenome não informado";
 		}
