@@ -23,7 +23,7 @@ import br.com.livro.util.JAXBUtil;
 import br.com.livro.util.RegexUtil;
 import br.com.livro.util.ServletUtil;
 
-@WebServlet("/carros/*")
+//@WebServlet("/carros/*")
 public class CarrosServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -162,5 +162,4 @@ public class CarrosServlet extends HttpServlet {
 			resp.sendError(404, "URL inválida");
 		}
 	}
-
 }

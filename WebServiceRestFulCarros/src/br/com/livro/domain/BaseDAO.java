@@ -29,7 +29,7 @@ public class BaseDAO {
 		return conn;
 	}
 
-		public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException {
 		BaseDAO db = new BaseDAO();
 		// testa conexao
 
