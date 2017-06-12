@@ -35,14 +35,14 @@ public class CarroDAO extends BaseDAO {
 		return null;
 	}
 
-	public List<Carro> findByName(String name) throws SQLException {
+	public List<Carro> findByName(String nome) throws SQLException {
 		List<Carro> carros = new ArrayList<>();
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		try {
 			conn = getConnection();
 			stmt = conn.prepareStatement("select * from carro where lower(nome) like ?");
-			stmt.setString(1, "%" + name.toLowerCase() +"%");
+			stmt.setString(1, "%" + nome.toLowerCase() +"%");
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Carro c = createCarro(rs);
